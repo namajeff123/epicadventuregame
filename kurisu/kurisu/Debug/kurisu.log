@@ -1,0 +1,7 @@
+﻿  Source.cpp
+\\shr-student-p01\high schools\allen high school\2018\227385\documents\visual studio 2015\projects\kurisu\kurisu\source.cpp(39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+\\shr-student-p01\high schools\allen high school\2018\227385\documents\visual studio 2015\projects\kurisu\kurisu\source.cpp(40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+\\shr-student-p01\high schools\allen high school\2018\227385\documents\visual studio 2015\projects\kurisu\kurisu\source.cpp(64): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+\\shr-student-p01\high schools\allen high school\2018\227385\documents\visual studio 2015\projects\kurisu\kurisu\source.cpp(91): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  kurisu.vcxproj -> \\shr-student-p01\high schools\allen high school\2018\227385\documents\visual studio 2015\Projects\kurisu\Debug\kurisu.exe
+  kurisu.vcxproj -> \\shr-student-p01\high schools\allen high school\2018\227385\documents\visual studio 2015\Projects\kurisu\Debug\kurisu.pdb (Partial PDB)
