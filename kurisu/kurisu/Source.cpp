@@ -105,6 +105,7 @@ int main()
 		<< "strength:   " << user.str << endl
 		<< "defense:    " << user.def << endl
 		<< "hp:     " << user.hp << endl;
+//caveshit
 	cout << "Press any button to begin your adventure!" << endl;
 	cout << "You spawn in the middle of the compsci club." << endl;
 	cout << "You see a office to the north and a cave to the south" << endl;
