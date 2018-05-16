@@ -149,5 +149,15 @@ int main()
 
 	}
 	cout << "Wow you are truly an epic adventurer! However your adventure has only just begun >:)" << endl;
+	cout << "You have earned a skill point! Type 1 to invest your skill point in strength.\n Type 2 if to invest in defense, type 3 to increase your max health." << endl;
+	cin >> skillUpCommand;
+	switch (skillUpCommand) {
+	case 1: 
+		user.str += 1;
+	case 2:
+		user.def += 1;
+	case 3:
+		user.hp += 10;
+	}
 	return 0;
 }
