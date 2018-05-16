@@ -16,10 +16,10 @@ public:
 	string name;
 	float str;
 	float def;
-	float hp; 
-	float regen;   
-	float roll;   
-	float ouch;    
+	float hp;
+	float regen;
+	float roll;
+	float ouch;
 	float getAttack(character& opponent);
 	float getHeal(void);
 	void setRegen(float reg);
@@ -53,7 +53,7 @@ float character::getAttack(character& opponent)
 {
 
 
-	roll = rand() % 20 + 1; 
+	roll = rand() % 20 + 1;
 
 	if (roll <= 11)
 	{
@@ -88,7 +88,6 @@ float character::getHeal()
 int main()
 {
 	srand(time_t(NULL));
-	cout << "Welcome to Cool Adventure Game!" << endl;
 	character user, computer;
 	computer.name = "Bestial Geoff\n";
 
@@ -99,16 +98,20 @@ int main()
 
 	cout << "Please enter a name for your character:\n";
 	cin >> user.name;
-
+	string direction1;
 	cout << "\nYour name is: " << user.name << endl;
 	cout << "here are your statistics: \n"
 		<< "strength:   " << user.str << endl
 		<< "defense:    " << user.def << endl
 		<< "hp:     " << user.hp << endl;
+	cout << "Press any button to begin your adventure!" << endl;
+	cout << "You spawn in the middle of the compsci club." << endl;
+	cout << "You see a office to the north and a cave to the south" << endl;
+	cout << "Enter 'office' if you want to go north. Enter 'cave' if you want to go south" << endl;
+	cin >> direction1;
 
-	cout << "oh no an oppenent appeared!!!\n";
+	cout << "oh no an oppenent appeared in the " << direction1 << "." << endl;
 	cout << "you will have to fight him!" << endl << endl;
-
 	cout << "opponent's hp: 100" << endl;
 
 
@@ -143,7 +146,7 @@ int main()
 			cout << "Please enter a valid choice!";
 
 		}
-		
+
 	}
 	cout << "Wow you are truly an epic adventurer! However your adventure has only just begun >:)" << endl;
 	return 0;
