@@ -88,6 +88,7 @@ float character::getHeal()
 int main()
 {
 	srand(time_t(NULL));
+	cout << "Welcome to Cool Adventure Game!" << endl;
 	character user, computer;
 	computer.name = "Bestial Geoff\n";
 
