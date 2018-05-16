@@ -105,17 +105,19 @@ int main()
 		<< "strength:   " << user.str << endl
 		<< "defense:    " << user.def << endl
 		<< "hp:     " << user.hp << endl;
-//caveshit
 	cout << "Press any button to begin your adventure!" << endl;
 	cout << "You spawn in the middle of the compsci club." << endl;
 	cout << "You see a office to the north and a cave to the south" << endl;
 	cout << "Enter 'office' if you want to go north. Enter 'cave' if you want to go south" << endl;
 	cin >> direction1;
-
+	if (direction1 != "cave" && direction1 != "offce") {
+		cout << "WRONG INPUT YOU ARE DYSLEXIC NOW FACE BEAST GEOFF HIS HP IS UNFATHOMABLE" << endl;
+	}
+	else {
 	cout << "oh no an oppenent appeared in the " << direction1 << "." << endl;
 	cout << "you will have to fight him!" << endl << endl;
 	cout << "opponent's hp: 100" << endl;
-
+}
 
 	while (user.IsAlive() && computer.IsAlive())
 	{
