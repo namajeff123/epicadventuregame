@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string> 
 
+
+
 using namespace std;
 // declaring function for hit power
 //int power( int str, int def);
@@ -61,7 +63,7 @@ float character::getAttack(character& opponent)
 
 
 	// ouch is how much damage is done
-	roll = rand() % 20 + 1; // range between 1 &20
+	roll = rand() % 20 + 1;
 
 	if (roll <= 11)
 	{
@@ -76,11 +78,11 @@ float character::getAttack(character& opponent)
 	else if ((roll <= 20) && (roll >= 18))
 	{
 		ouch = (str * 3) - (def / 2);
-		//cout << "CRITICAL HIT!!";
+		cout << "CRITICAL HIT!!" << endl;
 	}
 
 	opponent.hp -= ouch;
-
+	cout << "After this attack the opponent has " << opponent.hp << "HP Left." << endl;
 	return ouch;
 
 }
@@ -106,9 +108,7 @@ cout << "Character has been destroyed\n";
 int main()
 {
 	srand(time_t(NULL));
-	//Class objects
 	character user, computer;
-	//Hard code in a name for the computer's player
 	computer.name = "Bestial Geoff\n";
 
 	float attackDamage;
@@ -116,7 +116,6 @@ int main()
 
 	user.setRegen(42.0);
 
-	//Recieve data for the user's player
 	cout << "Please enter a name for your character:\n";
 	cin >> user.name;
 
@@ -155,7 +154,6 @@ int main()
 		case 2:
 
 			attackDamage = user.getAttack(computer);
-
 			cout << "" << user.name << " did " << attackDamage << " damage to the opponent!\n";
 
 			break;
