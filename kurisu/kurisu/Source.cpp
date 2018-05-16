@@ -1,8 +1,8 @@
 #include <iostream>
-#include <string> 
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
+#include <string> 
 
 using namespace std;
 // declaring function for hit power
@@ -109,7 +109,7 @@ int main()
 	//Class objects
 	character user, computer;
 	//Hard code in a name for the computer's player
-	computer.name = "ZOID\n";
+	computer.name = "Bestial Geoff\n";
 
 	float attackDamage;
 	float hpAdded;
@@ -140,7 +140,7 @@ int main()
 			<< "hp: " << user.hp << "\t"
 			<< "\n";
 
-		cout << "what would you like to do: heal (1), attack(2), or run(3).\n";
+		cout << "what would you like to do: heal (1), attack(2).\n";
 		cin >> command;
 
 		switch (command)
@@ -160,16 +160,11 @@ int main()
 
 			break;
 
-		case 3:
-
-			cout << "" << user.name << " got away!\n";
-
-			break;
-
 		default:
 			cout << "Please enter a valid choice!";
 
 		} //end switch
 	}
+	cout << "Wow you are truly an epic adventurer! However your adventure has only just begun >:)" << endl;
 	return 0;
 }
