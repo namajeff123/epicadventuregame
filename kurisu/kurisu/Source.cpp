@@ -7,6 +7,7 @@
 using namespace std;
 
 int command;
+int skillUpCommand;
 
 
 class character
@@ -152,12 +153,16 @@ int main()
 	cout << "You have earned a skill point! Type 1 to invest your skill point in strength.\n Type 2 if to invest in defense, type 3 to increase your max health." << endl;
 	cin >> skillUpCommand;
 	switch (skillUpCommand) {
-	case 1: 
+	case 1:
 		user.str += 1;
 	case 2:
 		user.def += 1;
 	case 3:
 		user.hp += 10;
 	}
+	cout << "str: " << user.str << "\t"
+		<< "def: " << user.def << "\t"
+		<< "hp: " << user.hp << "\t"
+		<< "\n";
 	return 0;
 }
