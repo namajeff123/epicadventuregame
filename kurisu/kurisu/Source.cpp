@@ -7,6 +7,7 @@
 using namespace std;
 
 int command;
+int command2;
 int skillUpCommand;
 
 
@@ -110,14 +111,11 @@ int main()
 	cout << "You see a office to the north and a cave to the south" << endl;
 	cout << "Enter 'office' if you want to go north. Enter 'cave' if you want to go south" << endl;
 	cin >> direction1;
-	if (direction1 != "cave" && direction1 != "offce") {
-		cout << "WRONG INPUT YOU ARE DYSLEXIC NOW FACE JOSH THE BORG MAN HIS HP IS UNFATHOMABLE" << endl;
-	}
-	else {
+
 	cout << "oh no an oppenent appeared in the " << direction1 << "." << endl;
 	cout << "you will have to fight him!" << endl << endl;
 	cout << "opponent's hp: 100" << endl;
-}
+
 
 	while (user.IsAlive() && computer.IsAlive())
 	{
@@ -166,6 +164,43 @@ int main()
 	cout << "str: " << user.str << "\t"
 		<< "def: " << user.def << "\t"
 		<< "hp: " << user.hp << "\t"
-		<< "\n";
+		<< "\n\n";
+	string direction2;
+	cout << "You see a fork in the hallway you can choose to go east or west" << endl;
+	cin >> direction2;
+	if (direction2 == "east") {
+		cout << "You have transcended space and time and are now located in the delta quadrant upon a Borg cube. You see an ominous hallway to the north, you look behind you to the south and see a seemingly infinite number of drones." << endl;
+	}
+	else if(direction2 == "west"){
+		cout << "Your choice has placed you aboard a Ferengi starship, not only does the ship smell unfamiliar but now you have fight off a greedy Ferengi in search of your\n gold-pressed latinum." << endl;
+		cout << "Looks like you will have another epic encounter" << endl;
+		cout << "what would you like to do: heal (1), attack(2).\n";
+		cin >> command2;
+
+		switch (command2)
+		{
+		case 1:
+
+			hpAdded = user.getHeal();
+
+			cout << "" << user.name << " has regenerated " << hpAdded << " hp.\n";
+			break;
+
+		case 2:
+
+			attackDamage = user.getAttack(computer);
+
+			cout << "" << user.name << " did " << attackDamage << " damage to the Ferengi miscreant!\n";
+
+			break;
+
+		default:
+			cout << "Please enter a valid choice!";
+
+		}
+	}
+	else {
+		cout << "way to enter the wrong input you prob broke this game lmao" << endl;
+	}
 	return 0;
 }
