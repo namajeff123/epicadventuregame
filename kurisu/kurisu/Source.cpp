@@ -90,7 +90,8 @@ float character::getHeal()
 int main()
 {
 	srand(time_t(NULL));
-	character user, computer;
+	character user, computer, computer2;
+	computer2.name = "Ferengi Yaakov";
 	computer.name = "Bestial Geoff\n";
 
 	float attackDamage;
@@ -116,7 +117,7 @@ int main()
 	cout << "you will have to fight him!" << endl << endl;
 	cout << "opponent's hp: 100" << endl;
 
-
+	//
 	while (user.IsAlive() && computer.IsAlive())
 	{
 		cout << "str: " << user.str << "\t"
@@ -165,42 +166,65 @@ int main()
 		<< "def: " << user.def << "\t"
 		<< "hp: " << user.hp << "\t"
 		<< "\n\n";
+	//
 	string direction2;
 	cout << "You see a fork in the hallway you can choose to go east or west" << endl;
 	cin >> direction2;
 	if (direction2 == "east") {
 		cout << "You have transcended space and time and are now located in the delta quadrant upon a Borg cube. You see an ominous hallway to the north, you look behind you to the south and see a seemingly infinite number of drones." << endl;
 	}
-	else if(direction2 == "west"){
+	else if (direction2 == "west") {
 		cout << "Your choice has placed you aboard a Ferengi starship, not only does the ship smell unfamiliar but now you have fight off a greedy Ferengi in search of your\n gold-pressed latinum." << endl;
 		cout << "Looks like you will have another epic encounter" << endl;
-		cout << "what would you like to do: heal (1), attack(2).\n";
-		cin >> command2;
-
-		switch (command2)
+		while (user.IsAlive() && computer2.IsAlive())
 		{
-		case 1:
+			cout << "str: " << user.str << "\t"
+				<< "def: " << user.def << "\t"
+				<< "hp: " << user.hp << "\t"
+				<< "\n";
 
-			hpAdded = user.getHeal();
+			cout << "Ferengi Yaakov stares at you menacingly";
+			cout << "what would you like to do: heal (1), attack(2).\n";
+			cin >> command;
 
-			cout << "" << user.name << " has regenerated " << hpAdded << " hp.\n";
-			break;
+			switch (command)
+			{
+			case 1:
 
-		case 2:
+				hpAdded = user.getHeal();
 
-			attackDamage = user.getAttack(computer);
+				cout << "" << user.name << " has regenerated " << hpAdded << " hp.\n";
+				break;
 
-			cout << "" << user.name << " did " << attackDamage << " damage to the Ferengi miscreant!\n";
+			case 2:
 
-			break;
+				attackDamage = user.getAttack(computer2);
 
-		default:
-			cout << "Please enter a valid choice!";
+				cout << "" << user.name << " did " << attackDamage << " damage to the opponent!\n";
+
+				break;
+
+			default:
+				cout << "Please enter a valid choice!";
+
+			}
 
 		}
-	}
-	else {
-		cout << "way to enter the wrong input you prob broke this game lmao" << endl;
-	}
+		cout << "Wow you are truly an epic adventurer! However your adventure has only just begun >:)" << endl;
+		cout << "You have earned a skill point! Type 1 to invest your skill point in strength.\n Type 2 if to invest in defense, type 3 to increase your max health." << endl;
+		cin >> skillUpCommand;
+		switch (skillUpCommand) {
+		case 1:
+			user.str += 1;
+		case 2:
+			user.def += 1;
+		case 3:
+			user.hp += 10;
+		}
+		cout << "str: " << user.str << "\t"
+			<< "def: " << user.def << "\t"
+			<< "hp: " << user.hp << "\t"
+			<< "\n\n";
 	return 0;
+	}
 }
