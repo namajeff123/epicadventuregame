@@ -111,7 +111,7 @@ int main()
 	cout << "Enter 'office' if you want to go north. Enter 'cave' if you want to go south" << endl;
 	cin >> direction1;
 	if (direction1 != "cave" && direction1 != "offce") {
-		cout << "WRONG INPUT YOU ARE DYSLEXIC NOW FACE BEAST GEOFF HIS HP IS UNFATHOMABLE" << endl;
+		cout << "WRONG INPUT YOU ARE DYSLEXIC NOW FACE JOSH THE BORG MAN HIS HP IS UNFATHOMABLE" << endl;
 	}
 	else {
 	cout << "oh no an oppenent appeared in the " << direction1 << "." << endl;
